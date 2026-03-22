@@ -3,6 +3,25 @@
 ## Objetivo
 Implementar e analisar três soluções para o problema: verificar se um array contém dois elementos cuja soma é igual a um valor k.
 
+## Visão Geral das Soluções Prioritárias
+1. Força Bruta (O(n²))
+   - Percorre todos os pares possíveis de elementos.
+   - Simples de implementar e direta.
+   - Usar apenas para arrays pequenos ou validação inicial.
+
+2. Hash Map (O(n))
+   - Armazena elementos já vistos em um Set (ou Map).
+   - Checa se o complemento (k - num) já foi visto;
+   - Melhor performance para workloads gerais (n linear).
+
+3. Two Pointers (O(n log n))
+   - Ordena o array e usa ponteiros em ambas extremidades.
+   - Excelente tradeoff sem memórias extras grandes.
+   - Ideal para quando ordenação já estiver dada ou aceitável.
+
+> Dica: A sequência recomendada de priorização para uso prático é:
+> 1) Hash Map, 2) Two Pointers, 3) Força Bruta (apenas para casos pequenos ou compreensão).
+
 ## Estrutura do Projeto
 
 ```
